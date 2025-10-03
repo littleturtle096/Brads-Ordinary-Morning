@@ -1,0 +1,35 @@
+import sys
+
+print("Hi Brad,\n \n Welcome to your adventure!\n Your goal is to be on time to school at 8:00am.\n DON'T BE LATE!")
+
+print("\nIt's Morning, early sunrise with the birds chirping")
+
+choice1 = input("Type 1 to get ready or Type 2 to not get ready\n")
+
+if choice1 == "1":
+    print("\nYou get up in the morning, taking a shower, brushing your teeth, and washing your hair, \n you feel great, but realize you are about to be late for school.")
+else:   
+    print("\nYour mom yells at you, grounds you, and takes away your phone. She doesn't take you to school since you slept late.\n YOU LOSE!!!")
+    sys.exit(0)
+
+choice2 = input("type 1 to take the car or type 2 to take the bus to school")
+    
+if choice2 == "1":
+    print("\nYou get in a car crash, and lose\n YOU LOSE!!!")
+        
+    sys.exit(0)
+else:
+        
+    print("\nYou get onto the bus and see your worst enemy, he spits on you and asks for your lunch money")
+    choice3 = input ("Type 1 to fight for yourself or type 2 to get off the bus and run to school")
+if choice3 == "1":
+        print("\nHe beats you up and steals your lunch money, you are transported to the hospital for three days\n YOU LOSE!!!")
+        sys.exit(0)
+else:
+    print("\nYou jump off the bus and start sprinting towards school.\n You look down at your watch and the clock says 7:45am, you have to be there in 15 minutes.\n You spot an uber and decide to walk towards it.")
+    choice4 = input ("Type 1 to enter the Uber or Type 2 to keep running.")
+if choice4 == "1":
+    print("\nYou enter the Uber, but he goes the wrong direction and his phone dies, leaving you stranded.\n YOU LOSE!!!")
+    sys.exit(0)
+else:
+    print("\nYou keep running, time barely moving, and you enter the school at 7:59am, one minute before class starts. \n You made it!\n YOU WIN!!!")
