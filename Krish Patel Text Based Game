@@ -1,0 +1,38 @@
+import sys
+
+print("Hi Brad\nWelcome to your Adventure\nYour goal is to be on time to school.\nDON'T BE LATE")
+
+print("Are you ready for school?\n")
+
+choice1 = input("Type 1 to take a shower and get ready for school \nType 2 to not take a shower and leave early\n")
+
+if choice1 == "1":
+    print("Correct\n")    
+else:
+    print("Your mom yells at you\n You are declined access to the bus.\nBye\n")
+    sys.exit(0)
+choice2 = input("Type 1 to take the car.\nType 2 to take the bus\n")
+
+if choice2 == "2":
+    print("Correcto\n")
+else:
+    print("You get in a car crash. Adios\n")
+    sys.exit(0)
+choice3= input("Type 1 to engage in a fight with a bully. \nType 2 to exit the bus\n")
+ 
+if choice3 == "2":
+    print("正确的\n")
+else:
+    print("You get tackled in front of your crush.\n尴尬\n")
+    sys.exit(0)
+choice4 = input("Once you get off the bus, you wonder what you can do.\nType 1 to run to school.\nType 2 to call an Uber.\n")
+
+if choice4 == "1":
+    print("richtig\nYou make it to school on time and get to your first class and you're crush asks you to Homecoming\n")
+else:
+    print("You're Uber rating is 1.2 stars. No Ubers come to pick you up, which leads you to run to school. You are late. Since it is your 6th tardy, you have to each lunch alone.\nSehr traurig\n")
+    
+sys.exit(0)
+
+
+ 
