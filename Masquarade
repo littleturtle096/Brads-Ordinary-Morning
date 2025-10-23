@@ -1,0 +1,10 @@
+#Masquarade Murder
+#By Krish Patel, Cj King, Arnav V, Jasdeep S-S, and Daniel Badock.
+#Oct 23, 2025
+
+w = 1 #Variable for while loop
+
+SL = ('Lemon Rusk', 'Marco Zuccini', 'Jeffrey Bagels', 'Grill Fence', 'Barry Jelly-Son') #SL is for Suspect List
+
+while w = 1:
+    UI = input('what do you want to do: ') #UI is for User Input
