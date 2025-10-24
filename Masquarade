@@ -1,10 +1,120 @@
-#Masquarade Murder
-#By Krish Patel, Cj King, Arnav V, Jasdeep S-S, and Daniel Badock.
-#Oct 23, 2025
+#Masquerade Murder
+#by Jasdeep Steindorf-Singh, Krish Patel, CJ King, Arnav Vishwamitra, and Daniel Badock
+#October 24, 2025
 
 w = 1 #Variable for while loop
 
-SL = ('Lemon Rusk', 'Marco Zuccini', 'Jeffrey Bagels', 'Grill Fence', 'Barry Jelly-Son') #SL is for Suspect List
+c = 0 #Variable for courtyard loop
 
-while w = 1:
-    UI = input('what do you want to do: ') #UI is for User Input
+M = 0 #Variable for Master Bedroom loop
+
+SL = ['Kanye East', 'Warren Buffoon', 'Jeffery Bagels', 'Bill Fences', 'Berry Jelly-Son'] #SL is for Suspect List
+
+ESL = [] #ESL is Eliminated Suspects List
+
+J = [] #This is you Journal
+
+while w == 1:
+    
+    UI = input('\nWhere do you want to go?: ') #UI is for User Input
+    
+    if UI == 'journal':
+        
+        UI = input('\ndo you want to write or read your journal?: ')
+        
+        if UI == 'write':
+            
+            UI = input('\nWhat do you add to your journal?: ')
+            J.append(UI)
+        
+        else:
+            
+            if UI == 'read':
+                
+                print(J)
+                
+#Courtyard
+                
+    if UI == 'courtyard':
+        
+        c = 1
+        
+        while c == 1:
+        
+            UI = input('\nYou are in the Courtyard: ')
+        
+            if UI == 'interview':
+            
+            
+                print(SL)
+
+                UI = input('who do you want to interview?: ')
+            
+                if UI in SL:
+                
+                    if UI == 'kanye east':
+                    
+                        UI = input('\nthis is Kanye East')
+                
+                    if UI == 'warren buffoon':
+                    
+                        UI = input('\nthis is Warren Buffoon')
+                
+                    if UI == 'jeffery bagels':
+                    
+                        UI = input('\nthis is Jeffery Bagels')
+                
+                    if UI == 'bill fence':
+                    
+                        UI = input('\nthis is Bill Fence')
+                
+                    if UI == 'berry jelly-son':
+                    
+                        UI = input('\nthis is Berry Jelly-Son')
+                    
+                else:
+                
+                    print('\n', UI, 'is not in your suspect list.')
+                    
+            if UI == 'leave':
+                
+                c = 0
+                
+#Master Bedroom                
+            
+    if UI == 'master bedroom':
+            
+            m = 1
+        
+            while m == 1:
+        
+                print('\nYou are in the Master Bedroom.')
+                print('\nThere is a Closet and a Bathroom. ')
+                
+                UI = input('\nWhere do you want to go?: ')
+        
+    #Closet
+           
+                if UI == 'closet':
+                
+                    print('\nYou are in the Closet.')
+                    UI = input('\nYou find a bloody knife with something furry on the handle: ')
+            
+                if UI == 'search':
+                    
+                    print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
+            
+    #Bathroom
+           
+            if UI == 'bathroom':
+            
+                print('\nYou are in the Bathroom. ')
+                print('\nThere is nothing of interest here.')
+            
+            if UI == 'leave':
+                
+                m = 0
+                
+                
+                
+
