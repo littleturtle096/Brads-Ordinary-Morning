@@ -84,37 +84,36 @@ while w == 1:
             
     if UI == 'master bedroom':
             
-            m = 1
+        m = 1
         
-            while m == 1:
+        while m == 1:
         
-                print('\nYou are in the Master Bedroom.')
-                print('\nThere is a Closet and a Bathroom. ')
+            print('\nYou are in the Master Bedroom.')
+            print('\nThere is a Closet and a Bathroom. ')
                 
-                UI = input('\nWhere do you want to go?: ')
+            UI = input('\nWhere do you want to go?: ')
         
     #Closet
            
-                if UI == 'closet':
+            if UI == 'closet':
                 
-                    print('\nYou are in the Closet.')
-                    UI = input('\nYou find a bloody knife with something furry on the handle: ')
+                print('\nYou are in the Closet.')
+                UI = input('\nYou find a bloody knife with something furry on the handle: ')
             
-                if UI == 'search':
+            if UI == 'search':
                     
-                    print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
+                print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
             
     #Bathroom
            
-            if UI == 'bathroom':
+        if UI == 'bathroom':
             
-                print('\nYou are in the Bathroom. ')
-                print('\nThere is nothing of interest here.')
+            print('\nYou are in the Bathroom. ')
+            print('\nThere is nothing of interest here.')
             
-            if UI == 'leave':
+        if UI == 'leave':
                 
-                m = 0
+            m = 0
                 
                 
                 
-
