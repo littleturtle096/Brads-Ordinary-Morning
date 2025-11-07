@@ -6,9 +6,13 @@ w = 1 #Variable for while loop
 
 c = 0 #Variable for courtyard loop
 
-M = 0 #Variable for Master Bedroom loop
+m = 0 #Variable for Master Bedroom loop
 
-SL = ['Kanye East', 'Warren Buffoon', 'Jeffery Bagels', 'Bill Fences', 'Berry Jelly-Son'] #SL is for Suspect List
+d = 0 #Variable for Dining Hall loop
+
+t = 0 #Table loop
+
+SL = ['kanye east', 'warren buffoon', 'jeffery bagels', 'bill fences', 'berry jelly-Son'] #SL is for Suspect List
 
 ESL = [] #ESL is Eliminated Suspects List
 
@@ -54,23 +58,23 @@ while w == 1:
                 
                     if UI == 'kanye east':
                     
-                        UI = input('\nthis is Kanye East')
+                        UI = input('\nThis is Kanye East')
                 
                     if UI == 'warren buffoon':
                     
-                        UI = input('\nthis is Warren Buffoon')
+                        UI = input('\nThis is Warren Buffoon')
                 
                     if UI == 'jeffery bagels':
                     
-                        UI = input('\nthis is Jeffery Bagels')
+                        UI = input('\nThis is Jeffery Bagels')
                 
-                    if UI == 'bill fence':
+                    if UI == 'bill fences':
                     
-                        UI = input('\nthis is Bill Fence')
+                        UI = input('\nThis is Bill Fences')
                 
                     if UI == 'berry jelly-son':
                     
-                        UI = input('\nthis is Berry Jelly-Son')
+                        UI = input('\nThis is Berry Jelly-Son')
                     
                 else:
                 
@@ -100,20 +104,68 @@ while w == 1:
                 print('\nYou are in the Closet.')
                 UI = input('\nYou find a bloody knife with something furry on the handle: ')
             
-            if UI == 'search':
+                if UI == 'search':
                     
-                print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
+                    print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
             
     #Bathroom
+           
+            if UI == 'bathroom':
+                
+                print('\nYou are in the Bathroom. ')
+                UI = input('\nThere is nothing of interest here except the faint smell of money.:')
+                
+                if UI == 'leave':
+            
+                    m = 0
+                     
+#Dining Hall
+      
+    if UI == 'dining hall':
+            
+        d = 1
+        
+        while d == 1:
+        
+            print('\nYou are in the Dining Hall.')
+            print('\nThere is a table and a kitchen. ')
+                
+            UI = input('\nDo you want to inspect the table or the kitchen?: ')
+        
+    #Table
+           
+            if UI == 'table':
+                
+                t = 1
+                
+                while t == 1:
+                
+                    print('\nYou see a large table.')
+                    UI = input('\nYou see the 3 plates, each with a sliver of a paper underneath, type 1, 2, or 3 to check the respective plates: ')
+            
+                    if UI == '1':
+                     
+                        print('\nOn the paper is text written as such, He nearly destroyed your company dude, you gotta kill him: ')
+                        
+                    if UI == '2':
+                        
+                        print('\nOn the paper is text written as such, Father, I want you to know that college is going well, I am on the Deans List: ')
+
+                    if UI == '3':
+                
+                        print('\nOn the paper is text written as such, Honey, I love you. Like a diamond in the night sky, your beauty glistens.: ')
+                    
+                        if UI == 'leave':
+                            
+                            t = 0
+                        
+    #Kitchen
            
         if UI == 'bathroom':
             
             print('\nYou are in the Bathroom. ')
             print('\nThere is nothing of interest here.')
+                
+            if UI == 'leave':
             
-        if UI == 'leave':
-                
-            m = 0
-                
-                
-                
+                    d = 0
