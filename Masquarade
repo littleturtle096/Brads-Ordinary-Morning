@@ -22,6 +22,8 @@ J = [] #This is you Journal
 
 while w == 1:
     
+    print('You are told by a fellow police officer that you are assigned to the investigation of the murder of Normandi Charles. He tells')
+    
     UI = input('\nWhere do you want to go?: ') #UI is for User Input
     
     if UI == 'journal':
@@ -38,7 +40,21 @@ while w == 1:
             if UI == 'read':
                 
                 print(J)
-                
+#Eliminated Suspect List
+    if UI =='eliminate':
+        
+        print(SL)
+        
+        UI = input('\nWho do you want to remove from the suspect list?\n')
+        if UI in SL:
+            SL.remove(UI)
+        
+            ESL.append(UI)
+        else:
+            print(UI, 'is not in your suspect list')
+    if UI == 'supsects':
+        print(SL)    
+        
 #Courtyard
                 
     if UI == 'courtyard':
@@ -48,6 +64,15 @@ while w == 1:
         while c == 1:
         
             UI = input('\nYou are in the Courtyard: ')
+            
+            if UI == ('talk to police'):
+            
+                UI == input('Who do you want to detain?')
+                
+                if UI == 'bill fences':
+                
+                    print('\nCongrats!!\nYOU SOLVED THE CASE!!\nAs a reward, you get a $10 gift card💰\n')
+                
         
             if UI == 'interview':
                 
@@ -182,3 +207,7 @@ while w == 1:
             
                 d = 0
 
+    
+
+                
+        
