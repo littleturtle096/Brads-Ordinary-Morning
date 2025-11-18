@@ -1,18 +1,22 @@
 #Masquerade Murder
-#by Jasdeep Steindorf-Singh, Krish Patel, CJ King, Arnav Vishwamitra, and Daniel Badock
+#by Jasdeep Steindorf-Singh = The Goat, Krish Patel, CJ King, Arnav Vishwamitra, and Daniel Badock
 #October 24, 2025
 
-w = 1 #Variable for while loop
+import sys
 
-c = 0 #Variable for courtyard loop
+b = 1 #Variable for Ballroom loop
+
+c = 0 #Variable for Courtyard loop
+
+i = 0 #Variable for Interview loop
 
 m = 0 #Variable for Master Bedroom loop
 
 d = 0 #Variable for Dining Hall loop
 
-t = 0 #Table loop
+t = 0 #Variable for Table loop
 
-i = 0 #Variable for Interview Loop
+k = 0 #Kitchen Loop
 
 SL = ['kanye east', 'warren buffoon', 'jeffery bagels', 'bill fences', 'berry jelly-son'] #SL is for Suspect List
 
@@ -20,15 +24,14 @@ ESL = [] #ESL is Eliminated Suspects List
 
 J = [] #This is you Journal
 
-while w == 1:
-    
-    print('You are told by a fellow police officer that you are assigned to the investigation of the murder of Normandi Charles. He tells')
+while b == 1:
+    print('A police tells you to investigate the house and that him and all the suspects will be sitting in the courtyard. He tells you to come to him when you have found the murderer of Normandy Charles.' )
     
     UI = input('\nWhere do you want to go?: ') #UI is for User Input
     
     if UI == 'journal':
         
-        UI = input('\ndo you want to write or read your journal?: ')
+        UI = input('\nDo you want to write or read your journal?: ')
         
         if UI == 'write':
             
@@ -40,21 +43,17 @@ while w == 1:
             if UI == 'read':
                 
                 print(J)
-#Eliminated Suspect List
-    if UI =='eliminate':
-        
+                
+    if UI == 'eliminate':
         print(SL)
-        
-        UI = input('\nWho do you want to remove from the suspect list?\n')
+        UI = input('who do you want to remove from the suspect list?')
         if UI in SL:
             SL.remove(UI)
-        
             ESL.append(UI)
         else:
-            print(UI, 'is not in your suspect list')
-    if UI == 'supsects':
-        print(SL)    
-        
+             print(UI, 'is not in your suspect list')
+    if UI == 'suspects':
+        print(SL)
 #Courtyard
                 
     if UI == 'courtyard':
@@ -64,63 +63,60 @@ while w == 1:
         while c == 1:
         
             UI = input('\nYou are in the Courtyard: ')
-            
-            if UI == ('talk to police'):
-            
-                UI == input('Who do you want to detain?')
-                
+            if UI == 'talk to police':
+                UI = input('Who do you want to detain')
                 if UI == 'bill fences':
-                
-                    print('\nCongrats!!\nYOU SOLVED THE CASE!!\nAs a reward, you get a $10 gift card💰\n')
-                
+                    print('congrats, you solved the case, and you are given a $10 gift card, go get a starbucks or smth, idk')
+                c = 0
+                w = 0
+                sys.exit(0)
+            
+            if UI == 'leave':
+                        
+                c = 0
         
             if UI == 'interview':
-                
+            
                 i = 1
                 
                 while i == 1:
                     
+                    if UI == 'leave':
+
+                        i = 0
+                        c = 1
+                
                     print(SL)
 
-                    UI = input('who do you want to interview?: ')
-                    
-                    if UI == 'leave':
-                    
-                        i = 0
+                    UI = input('Who do you want to interview?: ')
             
                     if UI in SL and not UI == 'leave':
                 
                         if UI == 'kanye east':
-                        
-                            print("\nHere are the notes that you gathered from Kanye's interview:\nKanye East;\n1.No allergies\n2.Billionare Mcdonald's worker\n3.Wearing black cargo pants with blue wool jacket, and a leopard mask\n")
-
+                    
+                            print('These are the notes you have gathered from Kanyes interview: No Allergies, he flipped a few billion Mcburgers to become rich, \nHe is wearing black cargo pants and a blue wool jacket')
                 
                         if UI == 'warren buffoon':
-                        
-                            print("\nHere are the notes that you gathered from Warren's interview:\nWarren Buffoon;\n1.No allergies\n2.Billionare Real Estate Giant\n3.Wearing an all-white jumpsuit, and black phone mask\n")
+                    
+                            print('\nThese are the notes you have gathered from Warrens interview: No allergies, real estate billionare, \nHe is currently wearing an all white jumpsuit with a blue wool tophat')
                 
                         if UI == 'jeffery bagels':
                     
-                            print("\nHere are the notes that you gathered from Jeffery's interview:\nJeffery Bagels;\n1.sNo allergies\n2.Billionare E-Commerce \n3.Disco Outfit with blue wool pants, and peacock feather mask\n")
+                            print('\nThese are the notes you have gathered from Jefferys interview: Multi billionare with company called Bagelzon, \nHe is wearing a blue wool hat to cover his bald bagel head')
                 
                         if UI == 'bill fences':
                     
-                            print("\nHere are the notes that you gathered from Bill's interview:\nBill Fences;\n1.Lactose Intolerant\n2.Billionare Tech Company Founder\n3.Wearing a tropical outfit with blue wool glasses")
+                            print('\nThese are the notes you have gathered from Bills interview: Billionaire tech company founder \nHe is wearing a tropical outfit with a blue beach ball mask')
                 
                         if UI == 'berry jelly-son':
                     
-                            print("\nHere are the notes that you gathered from Berry's interview:\nBerry Jelly-Son;\n1.Allergic to Peanut Butter\n2.Billionare Software Commericalizer\n3.Wearing neon clothing with a blue wool tie, and a neon face mask\n")    
-        
+                            print('\nThese are the notes you have gathered from Berrys interview: He is allergic to Peanut butter, software commerializer \nWearing neon clothing with a blue wool tie')
                     
-                else:
-                    if not UI == 'leave':
-                        
-                        print('\n', UI, 'is not in your suspect list.')
-                
-            if UI == 'leave':
-                
-                c = 0
-                
+                    else:
+                        if not UI == 'leave':
+                            print('\n', UI, 'is not in your suspect list.')
+                    
+
 #Master Bedroom                
             
     if UI == 'master bedroom':
@@ -132,16 +128,20 @@ while w == 1:
             print('\nYou are in the Master Bedroom.')
             print('\nThere is a Closet and a Bathroom. ')
                 
-            UI = input('\nWhere do you want to go?: ')
+            UI = input('\nWhat do you want to search?: ')
+            
+            if UI == 'leave':
+                
+                m = 0
         
     #Closet
            
             if UI == 'closet':
                 
                 print('\nYou are in the Closet.')
-                UI = input('\nYou find a bloody knife with something furry on the handle. Do you want to search or ignore it? ')
+                UI = input('\nYou find a bloody knife with something furry on the handle, do you want to search it, yes or no?: ')
             
-                if UI == 'search':
+                if UI == 'yes':
                     
                     print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
             
@@ -152,14 +152,14 @@ while w == 1:
                 print('\nYou are in the Bathroom. ')
                 UI = input('\nThere is nothing of interest here except the faint smell of money.:')
                 
-                if UI == 'leave':
+            if UI == 'leave':
+                
+                m == 1
             
-                    m = 0
-                     
 #Dining Hall
       
     if UI == 'dining hall':
-            
+        
         d = 1
         
         while d == 1:
@@ -168,6 +168,10 @@ while w == 1:
             print('\nThere is a table and a kitchen. ')
                 
             UI = input('\nDo you want to inspect the table or the kitchen?: ')
+            
+            if UI == 'leave':
+                
+                d = 0
         
     #Table
            
@@ -175,7 +179,7 @@ while w == 1:
                 
                 t = 1
                 
-                while t == 1:
+                while t == 1 :
                 
                     print('\nYou see a large table.')
                     UI = input('\nYou see the 3 plates, each with a sliver of a paper underneath, type 1, 2, or 3 to check the respective plates: ')
@@ -192,22 +196,25 @@ while w == 1:
                 
                         print('\nOn the paper is text written as such, Honey, I love you. Like a diamond in the night sky, your beauty glistens.: ')
                     
-                        if UI == 'leave':
+                    if UI == 'leave':
                             
-                            t = 0
+                        t = 0
                         
-    #bathroom
+    #Kitchen
            
-        if UI == 'bathroom':
-            
-            print('\nYou are in the Bathroom. ')
-            print('\nThere is nothing of interest here.')
-                
-            if UI == 'leave':
-            
-                d = 0
-
-    
-
-                
-        
+            if UI == 'kitchen':
+                                
+                k = 1
+                                
+                while k == 1:
+                                
+                    print('\nYou are in the kitchen. ')
+                    print('\nEverything is neat and tidy except a knife is missing.')
+                                    
+                    UI = input('\nDo you want to leave?: ')
+                                
+                    if UI == 'yes':
+                                    
+                            k = 0
+                            
+                            d = 1
