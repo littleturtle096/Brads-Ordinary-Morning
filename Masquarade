@@ -16,7 +16,7 @@ d = 0 #Variable for Dining Hall loop
 
 t = 0 #Variable for Table loop
 
-k = 0 #Kitchen Loop
+k = 0 #Variable for Kitchen Loop
 
 SL = ['kanye east', 'warren buffoon', 'jeffery bagels', 'bill fences', 'berry jelly-son'] #SL is for Suspect List
 
@@ -25,7 +25,7 @@ ESL = [] #ESL is Eliminated Suspects List
 J = [] #This is you Journal
 
 while b == 1:
-    print('A police tells you to investigate the house and that him and all the suspects will be sitting in the courtyard. He tells you to come to him when you have found the murderer of Normandy Charles.' )
+    print('A man was murdered in his home during his Masquarade party. \nA police tells you to investigate the house and that him and all the suspects will be sitting in the courtyard. \nHe tells you to come to him when you have found the murderer of Normandy Charles.' )
     
     UI = input('\nWhere do you want to go?: ') #UI is for User Input
     
@@ -42,7 +42,7 @@ while b == 1:
             
             if UI == 'read':
                 
-                print(J)
+                print(J)    #Journal Code
                 
     if UI == 'eliminate':
         print(SL)
@@ -54,7 +54,7 @@ while b == 1:
              print(UI, 'is not in your suspect list')
     if UI == 'suspects':
         print(SL)
-#Courtyard
+#Courtyard        #Basic loop code can be seen at beginning of each area dnt ehe nd of each area
                 
     if UI == 'courtyard':
         
@@ -98,11 +98,11 @@ while b == 1:
                 
                         if UI == 'warren buffoon':
                     
-                            print('\nThese are the notes you have gathered from Warrens interview: No allergies, real estate billionare, \nHe is currently wearing an all white jumpsuit with a blue wool tophat')
+                            print('\nThese are the notes you have gathered from Warrens interview: No allergies, real estate billionare, \nHe is currently wearing an all white jumpsuit with a tophat')
                 
                         if UI == 'jeffery bagels':
                     
-                            print('\nThese are the notes you have gathered from Jefferys interview: Multi billionare with company called Bagelzon, \nHe is wearing a blue wool hat to cover his bald bagel head')
+                            print('\nThese are the notes you have gathered from Jefferys interview: Multi billionare with company called Bagelzon, \nHe is wearing a wool hat to cover his bald bagel head')
                 
                         if UI == 'bill fences':
                     
@@ -139,11 +139,11 @@ while b == 1:
             if UI == 'closet':
                 
                 print('\nYou are in the Closet.')
-                UI = input('\nYou find a bloody knife with something furry on the handle, do you want to search it, yes or no?: ')
+                UI = input('\nYou find a bloody knife with something furry on the handle, do you want to search it?: ')
             
-                if UI == 'yes':
+                if UI == 'search':
                     
-                    print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently.')
+                    print('\nThe furry bit is a small tear of blue wool that seems to have been ripped off of some clothing quite violently with a piece of extra chunky peanut butter on the end.')
             
     #Bathroom
            
@@ -209,11 +209,11 @@ while b == 1:
                 while k == 1:
                                 
                     print('\nYou are in the kitchen. ')
-                    print('\nEverything is neat and tidy except a knife is missing.')
+                    print('\nEverything is neat and tidy except a knife is missing and you can smell peanut butter.')
                                     
                     UI = input('\nDo you want to leave?: ')
                                 
-                    if UI == 'yes':
+                    if UI == 'leave':
                                     
                             k = 0
                             
