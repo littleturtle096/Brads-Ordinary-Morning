@@ -24,8 +24,11 @@ ESL = [] #ESL is Eliminated Suspects List
 
 J = [] #This is you Journal
 
+print('A man was murdered in his home during his Masquarade party. \n\nA police tells you to investigate the house and that him and all the suspects will be sitting in the courtyard. \n\nHe tells you to come to him when you have found the murderer of Normandy Charles. \n' )
+
+print('There is a master bedroom, a dining hall, and a courtyard. To leave anything type leave next to the colon, if it doesnt work try it again. \n\nTo search things, any comands you need to input will be told to / asked to you.')
+
 while b == 1:
-    print('A man was murdered in his home during his Masquarade party. \nA police tells you to investigate the house and that him and all the suspects will be sitting in the courtyard. \nHe tells you to come to him when you have found the murderer of Normandy Charles.' )
     
     UI = input('\nWhere do you want to go?: ') #UI is for User Input
     
@@ -46,7 +49,7 @@ while b == 1:
                 
     if UI == 'eliminate':
         print(SL)
-        UI = input('who do you want to remove from the suspect list?')
+        UI = input('Who do you want to remove from the suspect list?')
         if UI in SL:
             SL.remove(UI)
             ESL.append(UI)
@@ -62,15 +65,27 @@ while b == 1:
         
         while c == 1:
         
-            UI = input('\nYou are in the Courtyard: ')
-            if UI == 'talk to police':
-                UI = input('Who do you want to detain')
+            UI = input('\nYou are in the Courtyard, to talk to the officer, type officer when you think you \nknow the murderer \n\nTo speak to the suspects, type interview: ')
+            if UI == 'officer':
+                print(SL)
+                UI = input('Who do you want to detain:')
+                
                 if UI == 'bill fences':
                     print('congrats, you solved the case, and you are given a $10 gift card, go get a starbucks or smth, idk')
-                c = 0
-                w = 0
-                sys.exit(0)
-            
+                    c = 0
+                    w = 0
+                    sys.exit(0)
+                elif not UI == 'bill fences':
+                    print(UI, 'was not the murderer, you get sent to prison and the ghost of Normandy Charles haunts you till the end of your days')
+                    
+                    print('The murderer goes on to kill twenty more people. Nice job!')
+                    
+                    print('/nYOU LOSE, GAME OVER, L + RATIO')
+                    
+                    c = 0
+                    w = 0
+                    sys.exit(0)
+                    
             if UI == 'leave':
                         
                 c = 0
@@ -94,23 +109,23 @@ while b == 1:
                 
                         if UI == 'kanye east':
                     
-                            print('These are the notes you have gathered from Kanyes interview: No Allergies, he flipped a few billion Mcburgers to become rich, \nHe is wearing black cargo pants and a blue wool jacket')
+                            print('These are the notes you have gathered from Kanyes interview: No Allergies, he flipped a few billion Mcburgers to become rich, \n\nHe is wearing black cargo pants and a blue wool jacket')
                 
                         if UI == 'warren buffoon':
                     
-                            print('\nThese are the notes you have gathered from Warrens interview: No allergies, real estate billionare, \nHe is currently wearing an all white jumpsuit with a tophat')
+                            print('\nThese are the notes you have gathered from Warrens interview: No allergies, real estate billionare, \n\nHe is currently wearing an all white jumpsuit with a tophat')
                 
                         if UI == 'jeffery bagels':
                     
-                            print('\nThese are the notes you have gathered from Jefferys interview: Multi billionare with company called Bagelzon, \nHe is wearing a wool hat to cover his bald bagel head')
+                            print('\nThese are the notes you have gathered from Jefferys interview: Multi billionare with company called Bagelzon, \n\nHe is wearing a wool hat to cover his bald bagel head')
                 
                         if UI == 'bill fences':
                     
-                            print('\nThese are the notes you have gathered from Bills interview: Billionaire tech company founder \nHe is wearing a tropical outfit with a blue beach ball mask')
+                            print('\nThese are the notes you have gathered from Bills interview: Billionaire tech company founder \n\nHe is wearing a tropical outfit with a blue beach ball mask')
                 
                         if UI == 'berry jelly-son':
                     
-                            print('\nThese are the notes you have gathered from Berrys interview: He is allergic to Peanut butter, software commerializer \nWearing neon clothing with a blue wool tie')
+                            print('\nThese are the notes you have gathered from Berrys interview: He is allergic to Peanut butter, software commerializer \n\nWearing neon clothing with a blue wool tie')
                     
                     else:
                         if not UI == 'leave':
@@ -218,3 +233,4 @@ while b == 1:
                             k = 0
                             
                             d = 1
+
